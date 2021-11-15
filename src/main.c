@@ -52,18 +52,18 @@ int main()
 	SystemClock_Config();
 	SystemCoreClockUpdate();
 
-	__HAL_RCC_GPIOC_CLK_ENABLE();
+	__HAL_RCC_GPIOB_CLK_ENABLE();
 
-	GPIO_InitStructure.Pin = GPIO_PIN_12;
+	GPIO_InitStructure.Pin = GPIO_PIN_11;
 	GPIO_InitStructure.Speed = GPIO_SPEED_FREQ_HIGH;
 	GPIO_InitStructure.Mode = GPIO_MODE_OUTPUT_PP;
-	HAL_GPIO_Init(GPIOC, &GPIO_InitStructure);
+	HAL_GPIO_Init(GPIOB, &GPIO_InitStructure);
 
 	for (;;) {
-		delayUS(50000);
-		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_12, GPIO_PIN_RESET);
+		delayUS(10000);
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_11, GPIO_PIN_RESET);
 		delayUS(100000);
-		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_12, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_11, GPIO_PIN_SET);
 	}
 }
 

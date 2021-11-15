@@ -1,5 +1,5 @@
 LIBRARY = cmsis.a
-A_SOURCES = cmsis_device_f1/Source/Templates/gcc/startup_stm32f103xe.s
+A_SOURCES = cmsis_device_f1/Source/Templates/gcc/startup_stm32f103xb.s
 С_SOURCES =
 
 A_OBJECTS=$(A_SOURCES:.s=.o)
